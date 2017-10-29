@@ -1,0 +1,64 @@
+include "gradientAll.inc"
+include "map.inc"
+include "mona_blobv6.inc"
+
+resolution 0.005
+
+paused 1
+
+# configure the GUI window
+window
+( 
+   size [700 700] 
+   scale 700.435
+)
+
+
+gradient_single
+(
+   #bitmap "bitmaps/cave.png" 
+   #color "white"
+   size [0.000 0.000 0.000]
+   pose [-0.312 0.016 0.000 0.000]
+)
+
+gradient_double
+(
+   #bitmap "bitmaps/cave.png" 
+   #color "white"
+   size [0.000 0.000 0.000]
+   pose [0.312 0.016 0.000 0.000]
+)
+
+
+# load an environment bitmap
+floorplan
+(
+   color "black"
+   size [0.72 0.448 0.0]
+   boundary 1
+)
+
+floorplan
+(
+   bitmap "../bitmaps/border.png" 
+   color "blue"
+   size [0.72 0.448 0.100]
+   obstacle_return 1
+)
+
+
+define mona mona_blob(
+	color "random"
+	ctrl "basic"
+)
+
+#mona ( pose [-0.096 -0.048 0.000 -90])
+#mona ( pose [0.078 -0.02 0.000 -177.274])
+#mona ( pose [0.07 -0.15 0.000 -2.772])
+#mona ( pose [0.08 0.15 0.000 -165.35])
+#mona ( pose [0.21 0.10 0.000 -24.36])
+#mona ( pose [0.23 -0.08 0.000 43.35])
+#mona ( pose [-0.04 0.11 0.000 -143.35])
+#mona ( pose [0.29 0.02 0.000 -143.35])
+

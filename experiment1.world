@@ -1,0 +1,58 @@
+include "gradientAll.inc"
+include "map.inc"
+include "mona_blobv6.inc"
+
+resolution 0.005	#default = 0.02, which is too small given the robot size.
+
+paused 1			#starts paused. User needs to unpause to run the simulation
+
+# configure the GUI window
+window
+( 
+   size [700 700] 
+   scale 700.435
+)
+
+# Light source
+gradient_single
+(   
+   size [0.000 0.000 0.000]			#size set to zero to avoid red square
+   pose [-0.312 0.016 0.000 0.000]	#mid point location
+)
+
+
+# load an environment bitmap
+floorplan
+(
+   color "black"
+   size [0.72 0.448 0.0]
+   boundary 1
+)
+
+# Arena walls
+floorplan
+(
+   bitmap "../bitmaps/border.png" 	#file locations
+   color "blue"
+   size [0.72 0.448 0.100]
+   obstacle_return 1
+)
+
+
+define mona mona_blob(
+	color "random"
+	ctrl "basic"
+)
+
+#------------------
+# Robots in arena
+#------------------
+mona ( pose [-0.096 -0.048 0.000 -90])
+mona ( pose [0.078 -0.02 0.000 136.274])
+mona ( pose [0.07 -0.15 0.000 45.772])
+mona ( pose [0.08 0.15 0.000 -165.35])
+mona ( pose [0.21 0.10 0.000 -24.36])
+#mona ( pose [0.23 -0.08 0.000 43.35])
+#mona ( pose [-0.04 0.11 0.000 -143.35])
+#mona ( pose [0.29 0.02 0.000 -143.35])
+

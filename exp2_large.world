@@ -1,0 +1,109 @@
+include "gradientAll.inc"
+# include "gradientAllCircle.inc" 	#for Circle gradient
+include "map.inc"
+include "mona_blobv6.inc"
+
+resolution 0.005
+
+paused 1
+
+# configure the GUI window
+window
+( 
+   size [700 700] 
+   scale 312.949
+)
+
+
+gradient
+(
+   #bitmap "bitmaps/cave.png" 
+   #color "white"
+   size [0.000 0.000 0.000]
+   pose [-0.760 0.016 0.000 0.000]
+)
+
+gradient_dim
+(
+   #bitmap "bitmaps/cave.png" 
+   #color "white"
+   size [0.000 0.000 0.000]
+   pose [0.760 0.016 0.000 0.000]
+)
+
+# load an environment bitmap
+floorplan
+(
+   color "black"
+   size [1.600 1.000 0.000]
+   boundary 1
+)
+
+floorplan
+(
+   bitmap "../bitmaps/border.png" 
+   color "blue"
+   size [1.600 1.000 0.100]
+   obstacle_return 1
+)
+
+
+define mona mona_blob(
+	color "random"
+	ctrl "basic"
+)
+
+mona ( pose [0.681 -0.092 0.000 -90.000])
+mona ( pose [-0.119 -0.240 0.000 -177.274])
+mona ( pose [0.167 -0.362 0.000 -2.772])
+mona ( pose [0.448 -0.044 0.000 -165.350])
+mona ( pose [0.466 0.367 0.000 -24.360])
+mona ( pose [0.594 -0.321 0.000 43.350])
+mona ( pose [-0.229 0.282 0.000 -143.350])
+mona ( pose [0.585 0.021 0.000 -143.350])
+mona ( pose [0.022 0.357 0.000 25.350])
+mona ( pose [0.459 0.191 0.000 -63.350])
+
+mona ( pose [-0.215 -0.181 0.000 -90.000])
+mona ( pose [-0.000 -0.248 0.000 -177.274])
+mona ( pose [0.456 -0.369 0.000 -2.772])
+mona ( pose [-0.154 0.388 0.000 -165.350])
+mona ( pose [0.135 0.266 0.000 -24.360])
+mona ( pose [0.314 -0.412 0.000 43.350])
+mona ( pose [0.290 0.409 0.000 87.350])
+mona ( pose [0.632 -0.221 0.000 -143.350])
+mona ( pose [-0.191 0.169 0.000 -25.350])
+mona ( pose [0.461 -0.228 0.000 98.350])
+
+mona ( pose [-0.128 -0.018 0.000 -90.000])
+mona ( pose [0.021 -0.392 0.000 -56.274])
+mona ( pose [0.001 -0.121 0.000 -2.772])
+mona ( pose [0.115 -0.251 0.000 -165.350])
+mona ( pose [0.235 0.209 0.000 -24.360])
+mona ( pose [0.351 -0.158 0.000 43.350])
+mona ( pose [0.039 0.216 0.000 18.350])
+mona ( pose [0.664 0.166 0.000 -120.350])
+mona ( pose [0.605 0.302 0.000 47.350])
+mona ( pose [0.470 0.075 0.000 -143.350])
+
+mona ( pose [-0.229 0.069 0.000 -90.000])
+mona ( pose [0.101 -0.016 0.000 106.274])
+mona ( pose [0.216 -0.230 0.000 146.772])
+mona ( pose [0.647 0.413 0.000 -165.350])
+mona ( pose [0.334 0.130 0.000 -24.360])
+mona ( pose [0.255 -0.086 0.000 43.350])
+mona ( pose [-0.083 0.270 0.000 -56.350])
+mona ( pose [-0.242 -0.352 0.000 12.350])
+mona ( pose [0.354 0.283 0.000 163.350])
+mona ( pose [0.311 -0.004 0.000 52.350])
+
+mona ( pose [-0.099 -0.111 0.000 -90.000])
+mona ( pose [-0.020 0.022 0.000 -177.274])
+mona ( pose [0.126 -0.116 0.000 -2.772])
+mona ( pose [0.086 0.132 0.000 -165.350])
+mona ( pose [0.180 0.069 0.000 -24.360])
+mona ( pose [0.133 0.420 0.000 43.350])
+mona ( pose [0.704 -0.388 0.000 -143.350])
+mona ( pose [0.692 0.070 0.000 -143.350])
+mona ( pose [-0.054 0.128 0.000 -143.350])
+mona ( pose [-0.115 -0.393 0.000 -143.350])
